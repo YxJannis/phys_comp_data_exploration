@@ -79,10 +79,10 @@ def process_samples(samples, condition: str):
         rise_times.append(rise_time)
 
     print(f'---------------\nCondition: {condition}')
-    print(f'key,        Max amp         latency         rise time')
+    print(f'key,        Max amp         Amp indices         latency         rise time')
     for i in range(len(max_amps)):
-        print(f'{keys[i]},     {max_amps[i]},       {latencies[i]},             {rise_times[i]}')
-    print(f'\nMean:       {mean(max_amps)},      {mean(latencies)},           {mean(rise_times)}')
+        print(f'{keys[i]},     {max_amps[i]},           {max_amps_indices[i]},         {latencies[i]},             {rise_times[i]}')
+    print(f'\nMean:       {mean(max_amps)},         {mean(max_amps_indices)},     {mean(latencies)},           {mean(rise_times)}')
     print('\n\n')
 
 
